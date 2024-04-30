@@ -1,0 +1,8 @@
+##########################################################
+##       THIS IS CONFIG FILE FOR WI-FI CONNECTION       ##
+##                FILL OUT GAPPS BELLOW                 ##
+##                     !!!!!!!!!!!!!!                   ##
+##            EACH LINE HAVE TO END WITH ";"            ##
+##########################################################
+Connection Name = SmittD;
+Password = qwerty228;
