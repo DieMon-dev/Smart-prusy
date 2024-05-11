@@ -45,6 +45,3 @@ while True:
     i+=1
     
     sleep(25)                    #delay of 5s
-    
-
-
