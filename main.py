@@ -20,8 +20,9 @@ i = 1
 
 while True:
     led.on()
+    sleep(1)
     bme = bme280.BME280(i2c=i2c) #BME280 object created
-    sleep(2)
+    sleep(1)
     led.off()
     
     temperature, pressure, humidity = bme.read_compensated_data()
