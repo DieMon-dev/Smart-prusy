@@ -20,5 +20,5 @@ General algorythm script:
 - Collecting next data group...
 
 Some tips:
-- The information LED on controller turns on for about 2 seconds when data from sensor is collecting.
+- The information LED on controller turns on for about 2 seconds while data from sensor is collecting.
 - If the network connection is not stable, controller doesn't stop its work.  It records data locally to send it to the Firebase as soon as connection established. 
