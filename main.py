@@ -19,7 +19,9 @@ measurement_count = 1  # To track the number of measurements
 
 while True:
     led.on()
-    time.sleep(2)
+    sleep(1)
+    bme = bme280.BME280(i2c=i2c) #BME280 object created
+    sleep(1)
     led.off()
 
     temperature, pressure, humidity = bme.read_compensated_data()
@@ -48,3 +50,4 @@ while True:
 
     measurement_count += 1
     time.sleep(30)  # delay of 25 seconds
+
