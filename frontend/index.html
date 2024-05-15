@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
+    <!-- Include Firebase Database -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyDzPbbmREViwPxZvGJ0GVHo6Vd-0EIeHto",
+        authDomain: "smart-prusy.firebaseapp.com",
+        databaseURL: "https://smart-prusy-default-rtdb.europe-west1.firebasedatabase.app",
+        projectId: "smart-prusy",
+        storageBucket: "smart-prusy.appspot.com",
+        messagingSenderId: "69013815084",
+        appId: "1:69013815084:web:679ac5c408513b2dd8b689"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+</head>
+<body>
+    <header>
+        <h1>Wrocław University of Science and Technology</h1>
+    </header>
+    <div id="data">
+        <h3>Realtime data:</h3>
+        <p>Temperature: <span id="temperature">Loading...</span>°C</p>
+        <p>Humidity: <span id="humidity">Loading...</span>%</p>
+        <p>Pressure: <span id="pressure">Loading...</span> hPa</p>
+    </div>
+    <table id="history">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Pressure (hPa)</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data rows will be inserted here dynamically -->
+    </tbody>
+</table>
+
+    <script src="script.js"></script>
+</body>
+</html>

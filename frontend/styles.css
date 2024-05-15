@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+header {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#data {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+p {
+    margin: 10px 0;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    color: red;
+    border: 2px solid gray;  // Updated to gray border for the entire table
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid gray;  // Updated to gray borders for individual cells
+}
+
+thead {
+    background-color: red;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff0f0;
+}
+
