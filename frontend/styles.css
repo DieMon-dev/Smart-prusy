@@ -90,6 +90,18 @@ tbody tr:nth-child(odd) {
     background-color: #fff0f0;
 }
 
+footer {
+    background-color: #B32216; /* Same background color as the header */
+    color: white; /* Same text color as the header */
+    text-align: center; /* Centers the text within the footer */
+    padding: 10px 0; /* Consistent padding with the header */
+    margin: 0 -20px; /* Negates the body's padding */
+    width: calc(100% + 40px);
+    font-size: 0.8em; /* Optionally smaller font size for the footer */
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1); /* Adds shadow to the top of the footer for depth, inverted from the header */
+}
+
+
 @media (max-width: 600px) {
     h1, h2 {
         font-size: 1.5em; /* Smaller font size on smaller screens */
