@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sensor Data Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="res/faviconB.ico">
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
 
@@ -29,7 +30,10 @@
 </head>
 <body>
     <header>
-        <h1>Wrocław University of Science and Technology</h1>
+        <div class="header-content">
+            <img src="res/logoPWrGray.png" alt="WUST Logo" class="header-logo">
+            <h1>Welcome to Smart Prusy</h1>
+        </div>
     </header>
     <div id="data">
         <h3>Realtime data:</h3>
@@ -37,14 +41,28 @@
         <p>Humidity: <span id="humidity">Loading...</span>%</p>
         <p>Pressure: <span id="pressure">Loading...</span> hPa</p>
     </div>
+    <p><strong>Smart Prusy</strong> is an student-led project at Wroclaw University of Science and Technology. Our mission is to deliver precise, real-time environmental data, empowering our community to better understand the atmospheric conditions both inside and outside the campus located on Prusy Street.</p>
+    
+    <h2>What We Offer</h2>
+    <p>Our project harnesses cutting-edge technology to monitor and report on three key environmental factors:</p>
+    <ul>
+        <li><strong>Temperature:</strong> Stay updated with accurate temperature readings that help predict daily weather conditions and ensure comfortable indoor environments.</li>
+        <li><strong>Pressure:</strong> Our sensitive instruments detect subtle changes in atmospheric pressure, providing you with crucial information that can predict weather changes.</li>
+        <li><strong>Humidity:</strong> Understanding humidity levels is essential for both health and comfort. Our system offers precise measurements that inform you about the air quality and help in planning your day.</li>
+    </ul>
+
+    <h2>Purpose & Vision</h2>
+    <p>Smart Prusy aims to make environmental data accessible and understandable, promoting a deeper awareness of our immediate surroundings. Whether you're planning your attire for the day or researching for academic purposes, our real-time data is a reliable source for students, faculty, and visitors alike.</p>
+    
+    <p>Join us in leveraging this powerful information to enhance your daily life and academic activities on campus. With Smart Prusy, you're always informed about the weather and environmental conditions where it matters most.</p>
     <table id="history">
     <thead>
         <tr>
             <th>Date</th>
+            <th>Time</th>
             <th>Temperature (°C)</th>
             <th>Humidity (%)</th>
             <th>Pressure (hPa)</th>
-            <th>Time</th>
         </tr>
     </thead>
     <tbody>

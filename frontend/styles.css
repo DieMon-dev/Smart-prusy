@@ -6,47 +6,76 @@ body, html {
     color: #333;
 }
 
-header {
-    background-color: red;
+h1, h2 {
+    padding: 0.5em 0; /* Adds vertical space around headings */
+}
+
+h1 {
+    color: white; 
+    font-size: 2em; /* Larger font size for main heading */
+    text-align: center; /* Centers the main heading */
+}
+
+strong {
+    color: #B32216;
+}
+
+h2 {
+    color: #B32216; 
+    font-size: 1.5em; /* Sub-heading size */
+    border-bottom: 2px solid #ccc; /* Adds a subtle line under sub-headings */
+    margin-bottom: 0.75em; /* Space below sub-headings */
+}
+
+p {
+    font-size: 1em; /* Standard paragraph font size */
+    margin-bottom: 1em; /* Adds space below paragraphs */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Maximum space between elements */
+    align-items: center; /* Vertically center align items */
+    background-color: #B32216; /* Matches your header background */
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 24px;
+    padding: 10px;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
 }
 
 #data {
-    width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: red;
+    background-color: #B32216;
     color: white;
+    padding: 30px;
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-p {
-    margin: 10px 0;
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Maximum width */
+    margin: 20px auto; /* Centers the box and adds space around it */
 }
 
 table {
-    width: 80%;
+    width: 100%; /* Full width to utilize space effectively */
     margin: 20px auto;
     border-collapse: collapse;
     background-color: white;
-    color: red;
-    border: 2px solid gray;  // Updated to gray border for the entire table
+    color: #B01F09;
+    border: 2px solid gray;
 }
 
 th, td {
     text-align: center;
     padding: 8px;
-    border: 1px solid gray;  // Updated to gray borders for individual cells
+    border: 1px solid gray;
 }
 
 thead {
-    background-color: red;
+    background-color: #B32216;
     color: white;
 }
 
@@ -54,3 +83,26 @@ tbody tr:nth-child(odd) {
     background-color: #fff0f0;
 }
 
+/* Media Queries for responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for smaller screens */
+    }
+
+    h2 {
+        font-size: 1.2em; /* Adjust sub-heading size */
+    }
+
+    .header-content {
+        flex-direction: column; /* Stack logo and title vertically */
+        text-align: center;
+    }
+
+    #data, table {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    p, th, td {
+        font-size: 0.9em; /* Smaller font size for better readability */
+    }
+}

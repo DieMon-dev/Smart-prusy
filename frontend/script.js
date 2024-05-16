@@ -17,10 +17,10 @@ function updateTable(data) {
     data.forEach(sensor => {
         const row = table.insertRow(-1);  // Insert a new row at the end of the table
         const dateCell = row.insertCell(0);
-        const tempCell = row.insertCell(1);
-        const humCell = row.insertCell(2);
-        const pressCell = row.insertCell(3);
-        const timeCell = row.insertCell(4);
+        const timeCell = row.insertCell(1);
+        const tempCell = row.insertCell(2);
+        const humCell = row.insertCell(3);
+        const pressCell = row.insertCell(4);
 
         // Convert timestamp to human-readable date and time
         const date = new Date(sensor.timestamp);
