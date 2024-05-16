@@ -1,13 +1,54 @@
 body, html {
     margin: 0;
-    padding: 0;
+    padding: 0 10px; /* Adds horizontal padding to the body except for the header */
     font-family: Arial, sans-serif;
     background-color: white;
     color: #333;
 }
 
+<<<<<<< Updated upstream
 header {
     background-color: red;
+=======
+/* Resets padding for the header to ensure it remains full width */
+header {
+    padding: 0; /* Removes padding in the header */
+    margin: 0 -20px; /* Negates the body's padding */
+    width: calc(100% + 50px); /* Corrects the width to account for negative margins */
+}
+
+h1, h2 {
+    padding: 0.5em 10px; /* Adds horizontal padding to headings */
+}
+
+h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+strong {
+    color: #B32216;
+}
+
+h2 {
+    color: #B32216;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 0.75em;
+}
+
+p {
+    font-size: 1em;
+    margin: 1em 10px; /* Adds horizontal margins to paragraphs */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #B32216;
+>>>>>>> Stashed changes
     color: white;
     padding: 10px 20px;
     text-align: center;
@@ -20,10 +61,15 @@ header {
     padding: 20px;
     background-color: red;
     color: white;
+<<<<<<< Updated upstream
+=======
+    padding: 20px;
+>>>>>>> Stashed changes
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+<<<<<<< Updated upstream
 }
 
 p {
@@ -33,6 +79,16 @@ p {
 table {
     width: 80%;
     margin: 20px auto;
+=======
+    width: 90%;
+    max-width: 600px;
+    margin: 20px auto; /* Ensures margin on all sides */
+}
+
+table {
+    width: 90%; /* Allows some space on the sides */
+    margin: 20px auto; /* Adds margin on top and bottom */
+>>>>>>> Stashed changes
     border-collapse: collapse;
     background-color: white;
     color: red;
@@ -54,3 +110,24 @@ tbody tr:nth-child(odd) {
     background-color: #fff0f0;
 }
 
+<<<<<<< Updated upstream
+=======
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em; /* Smaller font size on smaller screens */
+    }
+
+    p, th, td {
+        font-size: 0.9em; /* Adjust font size for readability */
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #data, table {
+        width: 98%; /* Almost full width with a little space on sides */
+    }
+}
+>>>>>>> Stashed changes
