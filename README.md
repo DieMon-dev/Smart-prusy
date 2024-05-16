@@ -26,7 +26,8 @@ A dedicated section for historical data analysis helps users compare current rea
 
 Here's a preview of what our beta version looks like:
 
-![Smart Prusy Web UI](https://github.com/DieMon-dev/Smart-prusy/blob/main/ReadmeImages/screenUI.png)
+![Smart Prusy Web UI](https://github.com/DieMon-dev/Smart-prusy/blob/main/ReadmeImages/UIscreen1.png)
+![Smart Prusy Web UI](https://github.com/DieMon-dev/Smart-prusy/blob/main/ReadmeImages/UIscreen2.png)
 
 
 ## The algorythm
