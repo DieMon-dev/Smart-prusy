@@ -19,9 +19,7 @@ measurement_count = 1  # To track the number of measurements
 
 while True:
     led.on()
-    sleep(1)
-    bme = bme280.BME280(i2c=i2c) #BME280 object created
-    sleep(1)
+    time.sleep(2)
     led.off()
 
     temperature, pressure, humidity = bme.read_compensated_data()
@@ -39,7 +37,7 @@ while True:
     }
 
     if checkConnection():
-        update_firebase(firebase_url, 'sensor_data', data)
+        update_firebase(firebase_url, 'inside_sensor_data', data) #choose outside_sensor_data and inside_sensor_data
         print('Data written to remote database\n\n')
     else:
         with open('localData.txt', 'a') as file:
@@ -49,5 +47,5 @@ while True:
         print('Data written locally\n\n')
 
     measurement_count += 1
-    time.sleep(30)  # delay of 25 seconds
-
+    #time.sleep(60)  # delay of 25 seconds
+    machine.lightsleep(300000)

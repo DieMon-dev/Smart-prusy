@@ -35,11 +35,22 @@
             <h1>Welcome to Smart Prusy</h1>
         </div>
     </header>
-    <div id="data">
-        <h3>Realtime data:</h3>
-        <p>Temperature: <span id="temperature">Loading...</span>°C</p>
-        <p>Humidity: <span id="humidity">Loading...</span>%</p>
-        <p>Pressure: <span id="pressure">Loading...</span> hPa</p>
+    <h2>Last updated data:</h2>
+        <div class="data-container">
+        <div id="data-inside">
+            <h3>Data inside campus</h3>
+            <p>Time: <span id="now-time-inside">Loading...</span></p>
+            <p>Temperature: <span id="temperature-inside">Loading...</span>°C</p>
+            <p>Humidity: <span id="humidity-inside">Loading...</span>%</p>
+            <p>Pressure: <span id="pressure-inside">Loading...</span> hPa</p>
+        </div>
+        <div id="data-outside">
+            <h3>Data outside campus</h3>
+            <p>Time: <span id="now-time-outside">Loading...</span></p>
+            <p>Temperature: <span id="temperature-outside">Loading...</span>°C</p>
+            <p>Humidity: <span id="humidity-outside">Loading...</span>%</p>
+            <p>Pressure: <span id="pressure-outside">Loading...</span> hPa</p>
+        </div>
     </div>
     <p><strong>Smart Prusy</strong> is an student-led project at Wroclaw University of Science and Technology. Our mission is to deliver precise, real-time environmental data, empowering our community to better understand the atmospheric conditions both inside and outside the campus located on Prusy Street.</p>
     
@@ -55,22 +66,24 @@
     <p>Smart Prusy aims to make environmental data accessible and understandable, promoting a deeper awareness of our immediate surroundings. Whether you're planning your attire for the day or researching for academic purposes, our real-time data is a reliable source for students, faculty, and visitors alike.</p>
     
     <p>Join us in leveraging this powerful information to enhance your daily life and academic activities on campus. With Smart Prusy, you're always informed about the weather and environmental conditions where it matters most.</p>
+
+    <h2>Earlier data inside the campus:</h2>
     <table id="history">
-    <thead>
-        <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Temperature (°C)</th>
-            <th>Humidity (%)</th>
-            <th>Pressure (hPa)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <!-- Data rows will be inserted here dynamically -->
-    </tbody>
-</table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Temperature (°C)</th>
+                <th>Humidity (%)</th>
+                <th>Pressure (hPa)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data rows will be inserted here dynamically -->
+        </tbody>
+    </table>
     <footer>
-        <p>&copy; 2024 <a href = "https://github.com/DieMon-dev">DieMon-dev</a>. All rights reserved.</p>
+        <p>&copy; 2024 <a href="https://github.com/DieMon-dev">DieMon-dev</a>. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -1,7 +1,13 @@
+document.addEventListener('DOMContentLoaded', function() {
+    fetchRealTimeData();
+    fetchData();
+});
+
 function fetchData() {
-    const dbRef = firebase.database().ref('sensor_data');
+    const dbRefInside = firebase.database().ref('inside_sensor_data');
+    const dbRefOutside = firebase.database().ref('outside_sensor_data');
     // Order by 'timestamp' child, limit to the last 50 entries
-    dbRef.orderByChild('timestamp').limitToLast(50).on('value', snapshot => {
+    dbRefInside.orderByChild('timestamp').limitToLast(50).on('value', snapshot => {
         const data = [];
         snapshot.forEach(childSnapshot => {
             data.unshift(childSnapshot.val()); // Prepends data to keep newest at the top
@@ -33,27 +39,41 @@ function updateTable(data) {
     });
 }
 
-// Assuming Firebase is correctly initialized and configured
 function fetchRealTimeData() {
-    const dbRef = firebase.database().ref('sensor_data').limitToLast(1);  // Fetching the most recent record
-    dbRef.on('value', snapshot => {
+    const dbRefInside = firebase.database().ref('inside_sensor_data').limitToLast(1);  // Fetching the most recent record for inside campus
+    const dbRefOutside = firebase.database().ref('outside_sensor_data').limitToLast(1); // Fetching the most recent record for outside campus
+
+    dbRefInside.on('value', snapshot => {
         if (snapshot.exists()) {
             const data = snapshot.val();
             const latestKey = Object.keys(data)[0];  // Get the latest data entry
             const latestData = data[latestKey];
             
-            // Update the webpage elements
-            document.getElementById('temperature').textContent = `${latestData.temperature.toFixed(2)}`;
-            document.getElementById('humidity').textContent = `${latestData.humidity.toFixed(2)}`;
-            document.getElementById('pressure').textContent = `${latestData.pressure.toFixed(2)}`;
+            // Update the webpage elements for inside campus
+            document.getElementById('temperature-inside').textContent = `${latestData.temperature.toFixed(2)}`;
+            document.getElementById('humidity-inside').textContent = `${latestData.humidity.toFixed(2)}`;
+            document.getElementById('pressure-inside').textContent = `${latestData.pressure.toFixed(2)}`;
+
+            // Update the current time based on the latest data timestamp
+            const date = new Date(latestData.timestamp);
+            document.getElementById('now-time-inside').textContent = date.toLocaleString();
+        }
+    });
+
+    dbRefOutside.on('value', snapshot => {
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            const latestKey = Object.keys(data)[0];  // Get the latest data entry
+            const latestData = data[latestKey];
+            
+            // Update the webpage elements for outside campus
+            document.getElementById('temperature-outside').textContent = `${latestData.temperature.toFixed(2)}`;
+            document.getElementById('humidity-outside').textContent = `${latestData.humidity.toFixed(2)}`;
+            document.getElementById('pressure-outside').textContent = `${latestData.pressure.toFixed(2)}`;
+
+            // Update the current time based on the latest data timestamp
+            const date = new Date(latestData.timestamp);
+            document.getElementById('now-time-outside').textContent = date.toLocaleString();
         }
     });
 }
-
-// Call this function when the document is loaded
-document.addEventListener('DOMContentLoaded', fetchRealTimeData);
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    fetchData();
-});

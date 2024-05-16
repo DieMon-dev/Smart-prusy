@@ -1,20 +1,20 @@
 body, html {
     margin: 0;
-    padding: 0 10px; /* Adds horizontal padding to the body except for the header */
+    padding: 0 10px; 
     font-family: Arial, sans-serif;
     background-color: white;
     color: #333;
 }
 
-/* Resets padding for the header to ensure it remains full width */
+
 header {
-    padding: 0; /* Removes padding in the header */
-    margin: 0 -20px; /* Negates the body's padding */
-    width: calc(100% + 40px); /* Corrects the width to account for negative margins */
+    padding: 0; 
+    margin: 0 -20px; 
+    width: calc(100% + 40px); 
 }
 
 h1, h2 {
-    padding: 0.5em 10px; /* Adds horizontal padding to headings */
+    padding: 0.5em 10px; 
 }
 
 h1 {
@@ -36,7 +36,7 @@ h2 {
 
 p {
     font-size: 1em;
-    margin: 1em 10px; /* Adds horizontal margins to paragraphs */
+    margin: 1em 10px; 
 }
 
 .header-content {
@@ -53,7 +53,17 @@ p {
     width: auto;
 }
 
-#data {
+.data-container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    width: 90%;
+    max-width: 1200px; 
+    margin: 20px auto; 
+    flex-wrap: wrap;
+}
+
+#data-inside, #data-outside {
     background-color: #B32216;
     color: white;
     padding: 10px;
@@ -61,14 +71,14 @@ p {
     text-align: center;
     font-size: 18px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 600px;
-    margin: 20px auto; /* Ensures margin on all sides */
+    width: 45%; 
+    margin: 10px 0;
 }
 
+
 table {
-    width: 90%; /* Allows some space on the sides */
-    margin: 20px auto; /* Adds margin on top and bottom */
+    width: 90%; 
+    margin: 20px auto; 
     border-collapse: collapse;
     background-color: white;
     color: #B01F09;
@@ -91,38 +101,38 @@ tbody tr:nth-child(odd) {
 }
 
 footer {
-    background-color: #B32216; /* Same background color as the header */
-    color: white; /* Same text color as the header */
-    text-align: center; /* Centers the text within the footer */
-    padding: 10px 0; /* Consistent padding with the header */
-    margin: 0 -20px; /* Negates the body's padding */
+    background-color: #B32216; 
+    color: white; 
+    text-align: center;
+    padding: 10px 0; 
+    margin: 0 -20px; 
     width: calc(100% + 40px);
-    font-size: 0.8em; /* Optionally smaller font size for the footer */
-    box-shadow: 0 -4px 8px rgba(0,0,0,0.1); /* Adds shadow to the top of the footer for depth, inverted from the header */
+    font-size: 0.8em; 
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.1); 
 }
 footer a {
-    color: white; /* Make the link color white to match the footer text */
-    text-decoration: underline; /* Removes underline from links */
-    transition: color 0.3s; /* Smooth transition for color change */
+    color: white; 
+    text-decoration: underline; 
+    transition: color 0.3s; 
 }
 
 footer a:hover, footer a:focus {
-    color: #ffcccb; /* Lighter red for hover and focus to provide feedback */
-    text-decoration: underline; /* Adds underline on hover for clarity */
+    color: #ffcccb; 
+    text-decoration: underline; 
 }
 
 footer a:active {
-    color: #ffa3a2; /* Even lighter red when the link is being clicked */
+    color: #ffa3a2; 
 }
 
 
 @media (max-width: 600px) {
     h1, h2 {
-        font-size: 1.5em; /* Smaller font size on smaller screens */
+        font-size: 1.5em; 
     }
 
     p, th, td {
-        font-size: 0.9em; /* Adjust font size for readability */
+        font-size: 0.9em; 
     }
 
     .header-content {
@@ -130,8 +140,8 @@ footer a:active {
         text-align: center;
     }
 
-    #data, table {
+    #data-inside, #data-outside, table {
         font-size: 11px;
-        width: 98%; /* Almost full width with a little space on sides */
+        width: 98%; 
     }
 }
