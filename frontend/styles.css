@@ -6,15 +6,11 @@ body, html {
     color: #333;
 }
 
-<<<<<<< Updated upstream
-header {
-    background-color: red;
-=======
 /* Resets padding for the header to ensure it remains full width */
 header {
     padding: 0; /* Removes padding in the header */
     margin: 0 -20px; /* Negates the body's padding */
-    width: calc(100% + 50px); /* Corrects the width to account for negative margins */
+    width: calc(100% + 40px); /* Corrects the width to account for negative margins */
 }
 
 h1, h2 {
@@ -48,38 +44,23 @@ p {
     justify-content: space-between;
     align-items: center;
     background-color: #B32216;
->>>>>>> Stashed changes
     color: white;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 24px;
+    padding: 10px;
+}
+
+.header-logo {
+    height: 50px;
+    width: auto;
 }
 
 #data {
-    width: 300px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: red;
+    background-color: #B32216;
     color: white;
-<<<<<<< Updated upstream
-=======
     padding: 20px;
->>>>>>> Stashed changes
     border-radius: 8px;
     text-align: center;
     font-size: 18px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-<<<<<<< Updated upstream
-}
-
-p {
-    margin: 10px 0;
-}
-
-table {
-    width: 80%;
-    margin: 20px auto;
-=======
     width: 90%;
     max-width: 600px;
     margin: 20px auto; /* Ensures margin on all sides */
@@ -88,21 +69,20 @@ table {
 table {
     width: 90%; /* Allows some space on the sides */
     margin: 20px auto; /* Adds margin on top and bottom */
->>>>>>> Stashed changes
     border-collapse: collapse;
     background-color: white;
-    color: red;
-    border: 2px solid gray;  // Updated to gray border for the entire table
+    color: #B01F09;
+    border: 2px solid gray;
 }
 
 th, td {
     text-align: center;
     padding: 8px;
-    border: 1px solid gray;  // Updated to gray borders for individual cells
+    border: 1px solid gray;
 }
 
 thead {
-    background-color: red;
+    background-color: #B32216;
     color: white;
 }
 
@@ -110,8 +90,6 @@ tbody tr:nth-child(odd) {
     background-color: #fff0f0;
 }
 
-<<<<<<< Updated upstream
-=======
 @media (max-width: 768px) {
     h1, h2 {
         font-size: 1.5em; /* Smaller font size on smaller screens */
@@ -130,4 +108,3 @@ tbody tr:nth-child(odd) {
         width: 98%; /* Almost full width with a little space on sides */
     }
 }
->>>>>>> Stashed changes
