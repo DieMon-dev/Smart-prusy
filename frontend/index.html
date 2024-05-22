@@ -112,33 +112,6 @@
     </table>
     
     <h2>Graphical Representation of Data:</h2>
-    <div class="control-row">
-        <div>
-            <h3>Select Location:</h3>
-            <select id="location" onchange="fetchData()">
-                <option value="inside">Inside Campus</option>
-                <option value="outside">Outside Campus</option>
-            </select>
-        </div>
-        <div>
-            <h3>Select Data Mode:</h3>
-            <select id="dataMode" onchange="fetchData()">
-                <option value="real">Real Measurements</option>
-                <option value="hourly">Average for Each Hour</option>
-                <option value="daily">Average for Each Day</option>
-                <option value="monthly">Average for Each Month</option>
-            </select>
-        </div>
-        <div>
-            <h3>Sort Data By:</h3>
-            <select id="sortCriteria" onchange="setSortCriteria(this.value)">
-                <option value="date">Date</option>
-                <option value="temperature">Temperature</option>
-                <option value="humidity">Humidity</option>
-                <option value="pressure">Pressure</option>
-            </select>
-        </div>
-    </div>
     <div class="chart-container" id="endTable">
         <canvas id="temperatureChart" width="400" height="200"></canvas>
         <canvas id="humidityChart" width="400" height="200"></canvas>
